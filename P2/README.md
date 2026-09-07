@@ -1,6 +1,6 @@
 # Practical 2
 
-1. Classification
+## 1. Classification
 
 Classification is a supervised machine learning technique used to assign data into predefined categories or classes.
 
@@ -11,7 +11,7 @@ N → Loan Not Approved
 
 Since there are only two classes, it is called binary classification.
 
-2. Features
+## 2. Features
 
 Features are the input variables used by a machine learning model to make predictions.
 
@@ -29,7 +29,7 @@ Self Employed
 
 These features are used by the model to predict the loan approval status.
 
-3. Target Variable
+## 3. Target Variable
 
 The target variable is the variable that the machine learning model tries to predict.
 
@@ -59,7 +59,7 @@ N → 0
 
 This allows the algorithm to process categorical information.
 
-5. Decision Tree
+## 5. Decision Tree
 
 A Decision Tree is a supervised machine learning algorithm used for classification and regression.
 
@@ -79,7 +79,7 @@ Approved   Not Approved
 
 The final nodes of the tree provide the prediction.
 
-6. Entropy
+## 6. Entropy
 
 Entropy is a measure of impurity, uncertainty, or randomness in a dataset.
 
@@ -110,7 +110,7 @@ But:
 
 Entropy is high.
 
-7. Information Gain
+## 7. Information Gain
 
 Information Gain measures how much the entropy decreases after splitting the data.
 
@@ -127,7 +127,7 @@ criterion="entropy"
 
 means the Decision Tree uses entropy-based splitting.
 
-8. Training Data
+## 8. Training Data
 
 Training data is the portion of the dataset used to teach the machine learning model.
 
@@ -139,7 +139,7 @@ For 600 records:
 
 The model learns patterns between the features and the target using this data.
 
-9. Testing Data
+## 9. Testing Data
 
 Testing data is the portion of the dataset that is not used during training.
 
@@ -149,7 +149,7 @@ In your code:
 
 120 records → Testing
 
-10. Train-Test Split
+## 10. Train-Test Split
 
 Train-test split divides the dataset into training and testing portions.
 
@@ -164,7 +164,7 @@ Therefore:
 
 This allows us to train the model on one portion and evaluate it on another.
 
-11. Confusion Matrix
+## 11. Confusion Matrix
 
 A confusion matrix is a table used to evaluate the performance of a classification model.
 
@@ -178,7 +178,7 @@ For your loan dataset:
 
 Positive = Loan Approved
 Negative = Loan Not Approved
-12. True Positive (TP)
+## 12. True Positive (TP)
 
 True Positive occurs when the actual class is positive and the model correctly predicts positive.
 
@@ -189,7 +189,7 @@ Predicted = Loan Approved
 
 So the prediction is correct.
 
-13. True Negative (TN)
+## 13. True Negative (TN)
 
 True Negative occurs when the actual class is negative and the model correctly predicts negative.
 
@@ -200,7 +200,7 @@ Predicted = Loan Not Approved
 
 So the prediction is correct.
 
-14. False Positive (FP)
+## 14. False Positive (FP)
 
 False Positive occurs when the actual class is negative but the model predicts positive.
 
@@ -211,7 +211,7 @@ Predicted = Loan Approved
 
 This is an incorrect prediction.
 
-15. False Negative (FN)
+## 15. False Negative (FN)
 
 False Negative occurs when the actual class is positive but the model predicts negative.
 
@@ -222,7 +222,7 @@ Predicted = Loan Not Approved
 
 This is an incorrect prediction.
 
-16. Accuracy
+## 16. Accuracy
 
 Accuracy measures the overall proportion of correctly classified observations.
 
@@ -236,7 +236,7 @@ $$ Accuracy = \frac{81}{120}=67.5\% $$
 
 A higher accuracy generally indicates better overall classification performance.
 
-17. Error
+## 17. Error
 
 Error represents the proportion of incorrectly classified observations.
 
@@ -254,7 +254,7 @@ $$ Error = 100\%-67.5\%=32.5\% $$
 
 A lower error is better.
 
-18. Recall / Sensitivity
+## 18. Recall / Sensitivity
 
 Recall, also called Sensitivity or True Positive Rate, measures how well the model identifies actual positive cases.
 
@@ -268,7 +268,7 @@ Out of all applicants whose loans were actually approved, how many were correctl
 
 Higher recall means fewer actual positive cases are missed.
 
-19. Specificity
+## 19. Specificity
 
 Specificity measures how well the model identifies actual negative cases.
 
@@ -282,7 +282,7 @@ Out of all applicants whose loans were actually not approved, how many were corr
 
 Higher specificity means fewer negative cases are incorrectly classified as positive.
 
-20. Precision
+## 20. Precision
 
 Although it isn't printed in your current output, it is useful for understanding F1-score.
 
@@ -296,7 +296,7 @@ For your dataset:
 
 Out of all applicants predicted as Loan Approved, how many were actually approved?
 
-21. F1-Score
+## 21. F1-Score
 
 F1-score is a performance measure that combines precision and recall.
 
@@ -311,7 +311,7 @@ F1-score ranges from 0 to 1.
 
 It is particularly useful when we want a balance between precision and recall.
 
-22. AUC
+## 22. AUC
 
 AUC stands for Area Under the ROC Curve.
 
@@ -334,7 +334,7 @@ AUC	General interpretation
 
 Your AUC of around 0.67 indicates moderate/weak discrimination.
 
-23. ROC Curve
+## 23. ROC Curve
 
 ROC stands for Receiver Operating Characteristic.
 
@@ -347,13 +347,13 @@ at different classification thresholds.
 
 The area under this curve is called AUC.
 
-24. Cross-Validation
+## 24. Cross-Validation
 
 Cross-validation is a technique used to evaluate how well a machine learning model performs on different portions of the dataset.
 
 It reduces dependence on just one train-test split and provides a more reliable estimate of model performance.
 
-25. 5-Fold Cross-Validation
+## 25. 5-Fold Cross-Validation
 
 In 5-fold cross-validation, the dataset is divided into five parts.
 
@@ -367,7 +367,7 @@ Round 5 → Test Fold 5, Train on Folds 1–4
 
 The five accuracies are then averaged to obtain the Mean Cross-Validation Accuracy.
 
-26. StratifiedKFold
+## 26. StratifiedKFold
 
 StratifiedKFold is a version of K-fold cross-validation used for classification.
 
@@ -380,7 +380,7 @@ Loan Not Approved
 
 across the five folds.
 
-27. Mean CV Accuracy
+## 27. Mean CV Accuracy
 
 Mean CV Accuracy is the average accuracy obtained from all five folds.
 
@@ -396,7 +396,7 @@ The average of these values gives the Mean CV Accuracy.
 
 It provides an estimate of the model's general performance across different subsets of the data.
 
-28. Prediction Probability
+## 28. Prediction Probability
 
 predict_proba() gives the probability of each class.
 
@@ -414,6 +414,9 @@ Loan Approved
 because the probability of approval is higher.
 
 These probabilities are also used to calculate AUC.
+
+
+## In Short
 
 
 | Term                         | Theory                                                                                             |
